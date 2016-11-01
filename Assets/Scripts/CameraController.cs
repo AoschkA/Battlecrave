@@ -10,7 +10,11 @@ public class CameraController : MonoBehaviour
 	void Start ()
 	{
 	    Vector3 gamePlanePosition = gamePlane.transform.position;
-        Vector3 gamePlaneCenter = 
+	    Vector3 gamePlaneCenter;
+	    gamePlaneCenter.x = gamePlanePosition.x/2;
+	    gamePlaneCenter.y = gamePlanePosition.y/2;
+	    gamePlaneCenter.z = gamePlanePosition.z/2;
+
 
 	}
 	
