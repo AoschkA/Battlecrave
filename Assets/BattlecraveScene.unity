@@ -401,7 +401,10 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 9aa44d0ddd9f74bff6d8fef1806d611fc64686f9
 --- !u!1 &1316011299
 GameObject:
   m_ObjectHideFlags: 0
