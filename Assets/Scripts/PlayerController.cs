@@ -2,7 +2,8 @@
 using System.Collections;
 
 public class PlayerController : MonoBehaviour {
-    public float speed = 6f;
+    public float movementSpeed = 4f;
+    public float turnSmoothing = 15f; // A smoothing value for turning the player.
 
     private Animator animator;
     Vector3 movement;
@@ -16,20 +17,28 @@ public class PlayerController : MonoBehaviour {
         playerRigidbody = GetComponent<Rigidbody>();
     }
 	
-	void FixedUpdate() {
-        float h = Input.GetAxisRaw("Horizontal");
-        float v = Input.GetAxisRaw("Vertical");
-
-        Move(h, v);
+	void Update() {
         Turn();
-        Animate(h, v);
+        Move();
     }
-	void Move(float h, float v) {
-        movement.Set(h, 0f, v);
-        movement = movement.normalized * speed * Time.deltaTime;
+	void Move() {
+        Vector3 movement = new Vector3(0f,0f,0f);
+
+        if (Input.GetKey(KeyCode.W)) {
+            movement += transform.forward * Time.deltaTime * movementSpeed;
+        } if (Input.GetKey(KeyCode.S)) {
+            movement -= transform.forward * Time.deltaTime * movementSpeed;
+        } if (Input.GetKey(KeyCode.A)) {
+            movement -= transform.right * Time.deltaTime * movementSpeed;
+        } if (Input.GetKey(KeyCode.D)) {
+            movement += transform.right * Time.deltaTime * movementSpeed;
+        }
+
         playerRigidbody.MovePosition(transform.position + movement);
+        
     }
 
+    // Turn based on mouse cursor
     void Turn() {
         Ray camRay = Camera.main.ScreenPointToRay(Input.mousePosition);
 
@@ -42,11 +51,5 @@ public class PlayerController : MonoBehaviour {
             Quaternion newRotation = Quaternion.LookRotation(playerToMouse);
             playerRigidbody.MoveRotation(newRotation);
         }
-    }
-
-    void Animate(float h, float v) {
-        bool walking = h != 0f || v != 0f;
-        animator.SetBool("isMoving", walking);
-
     }
 }

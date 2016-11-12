@@ -4,41 +4,20 @@ using System.Collections;
 public class CameraController : MonoBehaviour
 {
 
-    public GameObject gamePlane;
+    public static GameObject gameCenter;
 	public GameObject player;
 	public int cameraDistance = 13;
-	//private GameObject camera;
-	private Vector3 gamePlaneCenter;
 	private Vector3 directionFromCenter;
-
-
-
-	// Use this for initialization
-	void Start ()
-	{
-		//gamePlane = GetComponent<GameObject> ();
-		//camera = GetComponent<GameObject> ();
-	   	
-		findPlaneCenter ();
-
-
-
-
-	}
 	
-	// Update is called once per frame
+	
+    void Awake() {
+        gameCenter = GameObject.FindGameObjectWithTag("Game Center");
+    }
+
 	void Update () {
 		findCameraPosition ();
 		Debug.Log (directionFromCenter);
 
-	}
-
-	void findPlaneCenter(){
-		Vector3 gamePlanePosition = gamePlane.transform.position;
-
-		gamePlaneCenter.x = gamePlanePosition.x/2;
-		gamePlaneCenter.y = gamePlanePosition.y/2;
-		gamePlaneCenter.z = gamePlanePosition.z/2;
 	}
 
 	void findCameraPosition(){
@@ -46,7 +25,7 @@ public class CameraController : MonoBehaviour
 		Vector3 playerPosition = player.transform.position;
 
 		// Find direction from center to player
-		directionFromCenter = (playerPosition - gamePlaneCenter).normalized;
+		directionFromCenter = (playerPosition - gameCenter.transform.position).normalized;
 
 		//New position, 13 indicates the distance, it is static, 5 indicates the height.
 		Vector3 cameraNewPosition = new Vector3 (directionFromCenter.x * cameraDistance, 5, directionFromCenter.z * cameraDistance);
@@ -61,7 +40,7 @@ public class CameraController : MonoBehaviour
 */
 		//transform.position = cameraNewPosition;
 		transform.position = cameraPositionLerped;
-		transform.LookAt (gamePlaneCenter);
+		transform.LookAt (gameCenter.transform.position);
 
 
 	}
