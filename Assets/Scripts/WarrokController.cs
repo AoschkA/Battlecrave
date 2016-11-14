@@ -26,5 +26,6 @@ public class WarrokController : MonoBehaviour {
 
     void ArcaneBolt() {
         Debug.Log("punch");
+
     }
 }
