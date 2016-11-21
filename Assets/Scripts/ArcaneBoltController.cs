@@ -14,6 +14,7 @@ public class ArcaneBoltController : MonoBehaviour {
     void OnTriggerEnter(Collider other) {
         if (other.gameObject.name == "Player") {
             // Hit player
+            Instantiate(hitPrefab, transform.position, transform.rotation);
             Destroy(this.gameObject);
         }
         if (other.gameObject.name == "Floor") {
