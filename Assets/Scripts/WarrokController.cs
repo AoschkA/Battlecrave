@@ -3,12 +3,17 @@ using System.Collections;
 using System.Timers;
 
 public class WarrokController : MonoBehaviour {
+    public GameObject arcaneBoltPrefab;
+
     private Animator anim;
     private long trigger = 0;
-    public Animation punch;
+    private GameObject player;
+    private GameObject arcaneBolt;
 
     void Awake() {
         anim = GetComponent<Animator>();
+        player = GameObject.FindGameObjectWithTag("Player");
+        arcaneBolt = GameObject.FindGameObjectWithTag("Arcane Bolt");
 
     }
 	void Update () {
@@ -17,7 +22,10 @@ public class WarrokController : MonoBehaviour {
             Animate();
         }
 
-	}
+        // Rotate boss
+        transform.LookAt(player.transform.position, Vector3.up);
+
+    }
 
     void Animate() {
         Debug.Log("trigger");
@@ -25,7 +33,10 @@ public class WarrokController : MonoBehaviour {
     }
 
     void ArcaneBolt() {
-        Debug.Log("punch");
+        Vector3 position = player.transform.position;
+        position.y = position.y + 30;
+        Instantiate(arcaneBoltPrefab, position, arcaneBolt.transform.rotation);
+        
 
     }
 }

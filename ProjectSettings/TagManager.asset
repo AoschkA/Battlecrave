@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Game Center
+  - Arcane Bolt
+  - Fire
   layers:
   - Default
   - TransparentFX
