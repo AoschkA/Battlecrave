@@ -1,10 +1,11 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using System.Collections;
 
 public class BossController : MonoBehaviour {
     public int startingHealth = 5500;
-    public int currentHealth;
-    public bool isDead = false;
+    private int currentHealth;
+    private bool isDead = false;
 
     private ParticleSystem hitParticles;
 
@@ -27,5 +28,13 @@ public class BossController : MonoBehaviour {
 
         //CapsuleCollider.isTrigger = true;
 
+    }
+
+    void OnCollisionEnter(Collision col)
+    {
+        if (col.gameObject.name == "Bullet") {
+            Debug.Log("Hit");
+            Destroy(col.gameObject);
+        }
     }
 }
