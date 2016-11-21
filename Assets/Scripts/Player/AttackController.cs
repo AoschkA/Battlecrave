@@ -47,10 +47,10 @@ public class AttackController : MonoBehaviour
 	            TempBulletRigidBody = TempBullet.GetComponent<Rigidbody>();
 
 	            //Ignore collision between bullet and player.
-	            Physics.IgnoreCollision(TempBullet.GetComponent<Collider>(), this.gameObject.GetComponent<Collider>());
+	            //Physics.IgnoreCollision(TempBullet.GetComponent<Collider>(), this.gameObject.GetComponent<Collider>());
 
 	            // Add force to bullet
-	            TempBulletRigidBody.AddForce((transform.forward*BulletForce) + new Vector3(0, 300, 0));
+	            TempBulletRigidBody.AddForce((transform.forward*BulletForce));
 
                 
 

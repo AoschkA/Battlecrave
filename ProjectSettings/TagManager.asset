@@ -3,13 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-<<<<<<< HEAD
-  tags: []
-=======
   tags:
   - Bullet
   - Boss
->>>>>>> 820ff47eb2aa817719ece0b001b20878893e41c6
+  - Arcane Bolt
   layers:
   - Default
   - TransparentFX
@@ -19,9 +16,9 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
+  - Floor
+  - Bullet
+  - Player
   - 
   - 
   - 

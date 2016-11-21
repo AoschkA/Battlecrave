@@ -32,7 +32,7 @@ public class BossController : MonoBehaviour {
 
     void OnCollisionEnter(Collision col)
     {
-        if (col.gameObject.name == "Bullet") {
+        if (col.gameObject.tag == "Bullet") {
             Debug.Log("Hit");
             Destroy(col.gameObject);
         }
