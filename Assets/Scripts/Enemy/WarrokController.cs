@@ -4,6 +4,7 @@ using System.Timers;
 
 public class WarrokController : MonoBehaviour {
     public GameObject arcaneBoltPrefab;
+    public GameObject meteorRainPrefab;
 
     private Animator anim;
     private long trigger = 0;
@@ -29,14 +30,16 @@ public class WarrokController : MonoBehaviour {
 
     void Animate() {
         Debug.Log("trigger");
-        anim.SetTrigger("punch");
+        anim.SetTrigger("flex");
     }
 
     void ArcaneBolt() {
         Vector3 position = player.transform.position;
         position.y = position.y + 30;
-        Instantiate(arcaneBoltPrefab, position, arcaneBolt.transform.rotation);
-        
+        Instantiate(arcaneBoltPrefab, position, Quaternion.Euler(0f, 0f, 0f));
+    }
 
+    void MeteorRain() {
+        Instantiate(meteorRainPrefab, new Vector3(0f,0f,0f), Quaternion.Euler(0f,0f,0f));
     }
 }
