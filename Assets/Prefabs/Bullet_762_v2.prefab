@@ -25,10 +25,9 @@ GameObject:
   - 54: {fileID: 54000013310613970}
   - 65: {fileID: 65000012926999890}
   - 122: {fileID: 122000011711544018}
-  - 114: {fileID: 114000013722240694}
   m_Layer: 10
   m_Name: Bullet_762_v2
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -104,7 +103,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010057385864}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.011408053, y: 0.011408053, z: 0.05816255}
@@ -126,17 +125,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114000013722240694
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000010057385864}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ccd67701243ef8742a94e8ae08c33bec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!122 &122000011711544018
 Halo:
   m_ObjectHideFlags: 1

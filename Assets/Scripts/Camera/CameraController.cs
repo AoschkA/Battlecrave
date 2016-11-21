@@ -16,7 +16,6 @@ public class CameraController : MonoBehaviour
 
 	void Update () {
 		findCameraPosition ();
-		Debug.Log (directionFromCenter);
 
 	}
 

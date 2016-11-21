@@ -4,13 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Game Center
-<<<<<<< HEAD
+  - Bullet
   - Boss
-=======
-  - Arcane Bolt
-  - Fire
->>>>>>> c06ddf4c1ac1aa7ba16713f7181281cd45117fa8
   layers:
   - Default
   - TransparentFX
@@ -20,9 +15,9 @@ TagManager:
   - UI
   - 
   - 
-  - Floor
-  - Player
-  - Bullet
+  - 
+  - 
+  - 
   - 
   - 
   - 
