@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Game Center
+  - Boss
   layers:
   - Default
   - TransparentFX
@@ -15,8 +16,8 @@ TagManager:
   - 
   - 
   - Floor
-  - 
-  - 
+  - Player
+  - Bullet
   - 
   - 
   - 

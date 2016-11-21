@@ -1,49 +1,84 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEditor;
 
 public class AttackController : MonoBehaviour
 {
     // Bullet emitter to shoot from.
-    public GameObject Bullet_Emitter;
+    public GameObject BulletEmitter;
 
     // Actual bullet.
     public GameObject Bullet;
 
     // Speed.
-    public float Bullet_Force;
+    public float BulletForce;
+
+    //ShootCooldown
+    private bool ShootCooldown = false;
+    private float CooldownTimeleft = 0.5f;
 
 	// Use this for initialization
-	void Start () {
+	public void Awake () {
 	    
 	}
 	
 	// Update is called once per frame
-	void Update () {
-	    if (Input.GetMouseButtonDown(0))
+	public void Update () {
+        if(ShootCooldown)
+            StartShootCooldown();
+
+
+	    if (!ShootCooldown)
 	    {
-	        GameObject TempBullet;
+	        if (Input.GetMouseButtonDown(0))
+	        {
+	            GameObject TempBullet;
 
-	        TempBullet = Instantiate(Bullet, Bullet_Emitter.transform.position, Bullet_Emitter.transform.rotation) as GameObject;
-
-            
-
-            // Fail correction
-            //TempBullet.transform.Rotate(Vector3.left * 90);
-
-            // RigidBody
-	        Rigidbody TempBulletRigidBody;
-	        TempBulletRigidBody = TempBullet.GetComponent<Rigidbody>();
-            
-            // Add force to bullet
-            TempBulletRigidBody.AddForce((transform.forward * Bullet_Force) + new Vector3(0,300,0));
-
-            // Destroy
-            Destroy(TempBullet, 10.0f);
+	            TempBullet =
+	                Instantiate(Bullet, BulletEmitter.transform.position, BulletEmitter.transform.rotation) as GameObject;
 
 
 
+	            // Fail correction
+	            //TempBullet.transform.Rotate(Vector3.left * 90);
 
+	            // RigidBody
+	            Rigidbody TempBulletRigidBody;
+	            TempBulletRigidBody = TempBullet.GetComponent<Rigidbody>();
+
+	            //Ignore collision between bullet and player.
+	            Physics.IgnoreCollision(TempBullet.GetComponent<Collider>(), this.gameObject.GetComponent<Collider>());
+
+	            // Add force to bullet
+	            TempBulletRigidBody.AddForce((transform.forward*BulletForce) + new Vector3(0, 300, 0));
+
+                
+
+	            // Destroy
+	            Destroy(TempBullet, 10.0f);
+
+               
+
+                ShootCooldown = true;
+
+
+                }
 	    }
-	
+
 	}
+
+    public void StartShootCooldown ()
+    {
+        CooldownTimeleft -= Time.deltaTime;
+
+        if (CooldownTimeleft < 0)
+        {
+            ShootCooldown = false;
+            CooldownTimeleft = 0.5f;
+        }
+
+
+    }
+
+
 }
