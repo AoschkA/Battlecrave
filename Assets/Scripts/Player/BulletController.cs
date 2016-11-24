@@ -3,18 +3,23 @@ using System.Collections;
 
 public class BulletController : MonoBehaviour
 {
-    private EnemyHealth enemyHealth;
-    // Use this for initialization
-    void Start()
-    {
-        enemyHealth.GetComponent<EnemyHealth>();
-    }
+    private GameObject boss;
+    private BossController bossHealth;
 
-    // Update is called once per frame
-    void Update()
+    void Awake()
     {
+        boss = GameObject.FindGameObjectWithTag("Boss");
+        bossHealth = boss.GetComponent<BossController>();
 
     }
 
-   
+    void OnCollisionEnter(Collision col)
+    {
+        if (col.gameObject.tag == "Boss") {
+            Debug.Log("Hit");
+            bossHealth.TakeDamage(200,transform.position);
+            Destroy(gameObject);
+
+        }
+    }
 }

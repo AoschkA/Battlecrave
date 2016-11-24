@@ -30,7 +30,7 @@ public class WarrokController : MonoBehaviour {
 
     void Animate() {
         Debug.Log("trigger");
-        anim.SetTrigger("flex");
+        anim.SetTrigger("punch");
     }
 
     void ArcaneBolt() {

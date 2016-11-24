@@ -1,6 +1,8 @@
 ﻿using System;
 using UnityEngine;
 using System.Collections;
+using System.Diagnostics;
+using Debug = UnityEngine.Debug;
 
 public class BossController : MonoBehaviour {
     public int startingHealth = 5500;
@@ -9,14 +11,18 @@ public class BossController : MonoBehaviour {
 
     private ParticleSystem hitParticles;
 
-    public void TakeDamage(int amount, Vector3 hitPoint) {
+    public void Awake()
+    {
+        currentHealth = startingHealth;
+    }
 
+    public void TakeDamage(int amount, Vector3 hitPoint) {
         if (isDead) return;
 
         currentHealth -= amount;
 
-        hitParticles.transform.position = hitPoint;
-        hitParticles.Play();
+        //hitParticles.transform.position = hitPoint;
+        //hitParticles.Play();
 
         if (currentHealth <= 0) {
             Death();
@@ -24,17 +30,10 @@ public class BossController : MonoBehaviour {
 
     }
     void Death() {
+        Debug.Log("Dead");
         isDead = true;
-
+        Destroy(this.gameObject);
         //CapsuleCollider.isTrigger = true;
 
-    }
-
-    void OnCollisionEnter(Collision col)
-    {
-        if (col.gameObject.tag == "Bullet") {
-            Debug.Log("Hit");
-            Destroy(col.gameObject);
-        }
     }
 }
