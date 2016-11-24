@@ -3,7 +3,7 @@ using System.Collections;
 
 public class HealthController : MonoBehaviour
 {
-    private int PlayerHealth;
+    public int PlayerHealth;
     private bool isDamaged;
     private bool isDead;
 
