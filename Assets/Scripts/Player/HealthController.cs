@@ -6,6 +6,7 @@ public class HealthController : MonoBehaviour
     public int PlayerHealth;
     private bool isDamaged;
     private bool isDead;
+    private bool isImmune;
 
     private EnemyHealth enemyHealth;
 
@@ -16,20 +17,18 @@ public class HealthController : MonoBehaviour
 	{
 	    PlayerHealth = 100;
 	    enemyHealth = GetComponent<EnemyHealth>();
+        isImmune = false;
 
-	}
-	
-	// Update is called once per frame
-	public void Update () {
-	
 	}
 
     public void GetHit(int damage)
     {
-        isDamaged = true;
-        PlayerHealth -= damage;
+        if (!isImmune) {
+            isDamaged = true;
+            PlayerHealth -= damage;
 
-        CheckIfDead();
+            CheckIfDead();
+        }
 
     }
 
@@ -39,6 +38,16 @@ public class HealthController : MonoBehaviour
         {
             isDead = true;
         }
+    }
+
+    public IEnumerator MakeImmune(float time) {
+        isImmune = true;
+        Debug.Log("immune");
+        yield return new WaitForSeconds(time);
+        isImmune = false;
+        Debug.Log("not immune");
+        yield return null;
+        
     }
 
 
