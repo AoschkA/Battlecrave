@@ -2,11 +2,12 @@
 using UnityEngine;
 using System.Collections;
 using System.Diagnostics;
+using UnityEngine.SceneManagement;
 using Debug = UnityEngine.Debug;
 
 public class BossController : MonoBehaviour {
     public int startingHealth = 5500;
-    private int currentHealth;
+    public int currentHealth = 5500;
     private bool isDead = false;
 
     private ParticleSystem hitParticles;
@@ -15,7 +16,13 @@ public class BossController : MonoBehaviour {
     {
         currentHealth = startingHealth;
     }
-
+    void Update()
+    {
+        if (currentHealth <= 0)
+        {
+            Death();
+        }
+    }
     public void TakeDamage(int amount, Vector3 hitPoint) {
         if (isDead) return;
 
@@ -32,7 +39,11 @@ public class BossController : MonoBehaviour {
     void Death() {
         Debug.Log("Dead");
         isDead = true;
-        Destroy(this.gameObject);
+        GameStats.timer = timer.gametime;
+        Debug.Log("GS is now" + GameStats.timer);
+        GameStats.status = "win";
+        SceneManager.LoadScene("EndScene");
+        //Destroy(this.gameObject);
         //CapsuleCollider.isTrigger = true;
 
     }

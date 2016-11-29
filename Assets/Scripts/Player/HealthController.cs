@@ -11,7 +11,10 @@ public class HealthController : MonoBehaviour
     private EnemyHealth enemyHealth;
 
 
-
+    void Start()
+    {
+ 
+    }
 	// Use this for initialization
 	void Awake ()
 	{
