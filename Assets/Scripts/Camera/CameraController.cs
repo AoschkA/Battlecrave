@@ -27,7 +27,7 @@ public class CameraController : MonoBehaviour
 		directionFromCenter = (playerPosition - gameCenter.transform.position).normalized;
 
 		//New position, 13 indicates the distance, it is static, 5 indicates the height.
-		Vector3 cameraNewPosition = new Vector3 (directionFromCenter.x * cameraDistance, 10, directionFromCenter.z * cameraDistance);
+		Vector3 cameraNewPosition = new Vector3 (directionFromCenter.x * cameraDistance, 20, directionFromCenter.z * cameraDistance);
 
 		// Lerping the position for better camera movement.
 		Vector3 cameraPositionLerped = Vector3.Lerp(transform.position, cameraNewPosition, Time.deltaTime * 2);
