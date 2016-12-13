@@ -7,6 +7,8 @@ public class HealthController : MonoBehaviour
     private bool isDamaged;
     private bool isDead;
     private bool isImmune;
+    public GameObject deadhigh;
+    public GameObject returnscreen;
 
     private EnemyHealth enemyHealth;
 
@@ -34,12 +36,19 @@ public class HealthController : MonoBehaviour
         }
 
     }
+    void Update()
+    {
+        CheckIfDead();
+    }
 
     public void CheckIfDead()
     {
-        if (PlayerHealth >= 0)
+        if (0 >= PlayerHealth)
         {
             isDead = true;
+            GameStats.status = "lost";
+            deadhigh.SetActive(true);
+            returnscreen.SetActive(true);
         }
     }
 
