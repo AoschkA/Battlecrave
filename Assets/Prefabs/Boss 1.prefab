@@ -2115,6 +2115,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingHealth: 5500
+  currentHealth: 5500
+  deadhigh: {fileID: 0}
+  returnscreen: {fileID: 1000012153255984, guid: 677ffbd3da32b3e408b1eb197d40f378,
+    type: 2}
 --- !u!135 &135000013658641958
 SphereCollider:
   m_ObjectHideFlags: 1

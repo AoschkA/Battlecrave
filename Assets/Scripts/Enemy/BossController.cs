@@ -2,6 +2,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Diagnostics;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using Debug = UnityEngine.Debug;
 
@@ -9,6 +10,8 @@ public class BossController : MonoBehaviour {
     public int startingHealth = 5500;
     public int currentHealth = 5500;
     private bool isDead = false;
+    public GameObject deadhigh;
+    public GameObject returnscreen;
 
     private ParticleSystem hitParticles;
 
@@ -42,7 +45,9 @@ public class BossController : MonoBehaviour {
         GameStats.timer = timer.gametime;
         Debug.Log("GS is now" + GameStats.timer);
         GameStats.status = "win";
-        SceneManager.LoadScene("EndScene");
+        deadhigh.SetActive(true);
+        returnscreen.SetActive(true);
+        //SceneManager.LoadScene("EndScene");
         //Destroy(this.gameObject);
         //CapsuleCollider.isTrigger = true;
 

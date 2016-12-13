@@ -3,13 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Floor
-  - Game Center
-  - Boss
-  - Arcane Bolt
-  - Bullet
-  - Hatch
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -19,9 +13,9 @@ TagManager:
   - UI
   - 
   - 
-  - Floor
-  - Player
-  - Bullet
+  - 
+  - 
+  - 
   - 
   - 
   - 
