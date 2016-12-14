@@ -450,7 +450,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 1089620562}
   - {fileID: 1606311753}
   - {fileID: 1505721234}
   - {fileID: 877694450}
@@ -1707,21 +1706,21 @@ MonoBehaviour:
   m_Value: 0
   m_Options:
     m_Options:
-    - m_Text: Option A
+    - m_Text: heal
       m_Image: {fileID: 0}
-    - m_Text: Option B
+    - m_Text: blink
       m_Image: {fileID: 0}
-    - m_Text: Option C
+    - m_Text: immunity
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: setab1
-        m_Mode: 2
+      - m_Target: {fileID: 1929252247}
+        m_MethodName: setab2
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 536125846}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Dropdown, UnityEngine.UI
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1829,7 +1828,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Option A
+  m_Text: heal
 --- !u!222 &580140861
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3103,8 +3102,8 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.5}
-  m_SizeDelta: {x: -20, y: -13}
+  m_AnchoredPosition: {x: 5, y: -0.5}
+  m_SizeDelta: {x: -30, y: -13}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &851610329
 MonoBehaviour:
@@ -3126,7 +3125,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 5c366876ae2f6574f942cd03913ff2a8, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -3346,7 +3345,7 @@ RectTransform:
   m_Children:
   - {fileID: 27752481}
   m_Father: {fileID: 48213035}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -110}
@@ -4254,73 +4253,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1052973317}
---- !u!1 &1089620561
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 224: {fileID: 1089620562}
-  - 222: {fileID: 1089620564}
-  - 114: {fileID: 1089620563}
-  m_Layer: 5
-  m_Name: RawImage
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &1089620562
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1089620561}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children: []
-  m_Father: {fileID: 48213035}
-  m_RootOrder: 0
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 300, y: 500}
-  m_Pivot: {x: 0, y: 0}
---- !u!114 &1089620563
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1089620561}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -98529514, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Texture: {fileID: 2800000, guid: c357b906baf44924e83e86c046ca94ff, type: 3}
-  m_UVRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
---- !u!222 &1089620564
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1089620561}
 --- !u!1 &1098783487
 GameObject:
   m_ObjectHideFlags: 0
@@ -4428,7 +4360,7 @@ RectTransform:
   - {fileID: 1417426883}
   - {fileID: 1177600963}
   m_Father: {fileID: 48213035}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 65}
@@ -5118,7 +5050,7 @@ RectTransform:
   - {fileID: 20162414}
   - {fileID: 851874565}
   m_Father: {fileID: 48213035}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 30}
@@ -5335,7 +5267,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Option A
+  m_Text: immunity
 --- !u!222 &1347755060
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5614,7 +5546,7 @@ RectTransform:
   m_Children:
   - {fileID: 1589690220}
   m_Father: {fileID: 48213035}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -5}
@@ -5992,7 +5924,7 @@ RectTransform:
   m_Children:
   - {fileID: 1773161556}
   m_Father: {fileID: 48213035}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
   m_AnchoredPosition: {x: 150, y: 100}
@@ -6468,7 +6400,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 48213035}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 120}
@@ -6880,9 +6812,60 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 114000013388505504, guid: 3908d547c32df384797ff1c9342c908a,
+        type: 2}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1929252247}
+    - target: {fileID: 114000013388505504, guid: 3908d547c32df384797ff1c9342c908a,
+        type: 2}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: setab1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013388505504, guid: 3908d547c32df384797ff1c9342c908a,
+        type: 2}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013388505504, guid: 3908d547c32df384797ff1c9342c908a,
+        type: 2}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013388505504, guid: 3908d547c32df384797ff1c9342c908a,
+        type: 2}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013388505504, guid: 3908d547c32df384797ff1c9342c908a,
+        type: 2}
+      propertyPath: m_Options.m_Options.Array.data[0].m_Text
+      value: blink
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013388505504, guid: 3908d547c32df384797ff1c9342c908a,
+        type: 2}
+      propertyPath: m_Options.m_Options.Array.data[1].m_Text
+      value: heal
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013388505504, guid: 3908d547c32df384797ff1c9342c908a,
+        type: 2}
+      propertyPath: m_Options.m_Options.Array.data[2].m_Text
+      value: immunity
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010341099330, guid: 3908d547c32df384797ff1c9342c908a,
+        type: 2}
+      propertyPath: m_Text
+      value: blink
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3908d547c32df384797ff1c9342c908a, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &1751466651 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114000013388505504, guid: 3908d547c32df384797ff1c9342c908a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1751466650}
+  m_Script: {fileID: 853051423, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1 &1755595736
 GameObject:
   m_ObjectHideFlags: 0
@@ -6914,7 +6897,7 @@ RectTransform:
   m_Children:
   - {fileID: 1900447166}
   m_Father: {fileID: 48213035}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -70}
@@ -7531,21 +7514,21 @@ MonoBehaviour:
   m_Value: 0
   m_Options:
     m_Options:
-    - m_Text: Option A
+    - m_Text: immunity
       m_Image: {fileID: 0}
-    - m_Text: Option B
+    - m_Text: blink
       m_Image: {fileID: 0}
-    - m_Text: Option C
+    - m_Text: heal
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: setab1
-        m_Mode: 2
+      - m_Target: {fileID: 1929252247}
+        m_MethodName: setab3
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 1900772613}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Dropdown, UnityEngine.UI
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -7955,6 +7938,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IF: {fileID: 1929252244}
+  ab1dd: {fileID: 1751466651}
+  ab2dd: {fileID: 536125846}
+  ab3dd: {fileID: 1900772613}
 --- !u!1 &1935419908
 GameObject:
   m_ObjectHideFlags: 0
