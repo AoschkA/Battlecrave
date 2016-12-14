@@ -9,19 +9,21 @@ public class HealthController : MonoBehaviour
     private bool isImmune;
     public GameObject deadhigh;
     public GameObject returnscreen;
+    int maxhp;
 
     private EnemyHealth enemyHealth;
 
 
     void Start()
     {
- 
+        maxhp = PlayerHealth;
     }
 	// Use this for initialization
 	void Awake ()
 	{
 	    PlayerHealth = 100;
-	    enemyHealth = GetComponent<EnemyHealth>();
+        maxhp = PlayerHealth;
+        enemyHealth = GetComponent<EnemyHealth>();
         isImmune = false;
 
 	}
@@ -39,6 +41,7 @@ public class HealthController : MonoBehaviour
     void Update()
     {
         CheckIfDead();
+        if (PlayerHealth > maxhp) PlayerHealth = maxhp;
     }
 
     public void CheckIfDead()

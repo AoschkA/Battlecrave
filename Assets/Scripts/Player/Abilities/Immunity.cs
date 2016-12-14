@@ -10,7 +10,12 @@ public class Immunity : Ability {
     void Awake() {
         player = GameObject.FindGameObjectWithTag("Player");
         healthController = player.GetComponent<HealthController>();
-        cooldownText = GameObject.Find("Canvas/ImmuneCooldownText").GetComponent<UnityEngine.UI.Text>();
+        if (GameStats.ab1 == "immunity")
+            cooldownText = GameObject.Find("Canvas/abilities/cdtext1").GetComponent<UnityEngine.UI.Text>();
+        if (GameStats.ab2 == "immunity")
+            cooldownText = GameObject.Find("Canvas/abilities/cdtext2").GetComponent<UnityEngine.UI.Text>();
+        if (GameStats.ab3 == "immunity")
+            cooldownText = GameObject.Find("Canvas/abilities/cdtext3").GetComponent<UnityEngine.UI.Text>();
     }
 
     public override void UseAbility() {

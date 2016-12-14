@@ -9,7 +9,12 @@ public class Blink : Ability {
 
     void Awake() {
         player = GameObject.FindGameObjectWithTag("Player");
-        cooldownText = GameObject.Find("Canvas/BlinkCooldownText").GetComponent<UnityEngine.UI.Text>();
+        if (GameStats.ab1 == "blink")
+            cooldownText = GameObject.Find("Canvas/abilities/cdtext1").GetComponent<UnityEngine.UI.Text>();
+        if (GameStats.ab2 == "blink")
+            cooldownText = GameObject.Find("Canvas/abilities/cdtext2").GetComponent<UnityEngine.UI.Text>();
+        if (GameStats.ab3 == "blink")
+            cooldownText = GameObject.Find("Canvas/abilities/cdtext3").GetComponent<UnityEngine.UI.Text>();
     }
 
     public override void UseAbility() {

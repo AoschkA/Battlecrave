@@ -13,15 +13,37 @@ namespace Assets.Scripts.Player.Abilities {
             immunity = GetComponent<Immunity>();
         }
 
-        void Update() {
-            if (Input.GetKey(KeyCode.Alpha1)) {
-                blink.UseAbility();
+        void Update()
+        {
+            if (Input.GetKey(KeyCode.Alpha1))
+            {
+                usekey(GameStats.ab1);
+
+
             }
-            if (Input.GetKey(KeyCode.Alpha2)) {
-                heal.UseAbility();
+            if (Input.GetKey(KeyCode.Alpha2))
+            {
+                usekey(GameStats.ab2);
             }
-            if (Input.GetKey(KeyCode.Alpha3)) {
-                immunity.UseAbility();
+            if (Input.GetKey(KeyCode.Alpha3))
+            {
+                usekey(GameStats.ab3);
+            }
+        }
+        void usekey(string ab)
+        {
+            switch (ab)
+            {
+                case "heal":
+                    heal.UseAbility();
+                    break;
+                case "blink":
+                    blink.UseAbility();
+                    break;
+                case "immunity":
+                    immunity.UseAbility();
+                    break;
+
             }
         }
     }

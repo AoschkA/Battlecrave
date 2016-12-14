@@ -13,9 +13,9 @@ public class GameStats : MonoBehaviour
     public static string playerName = "Player";
     public static string gun;
     public static string armor;
-    public static string ab1;
-    public static string ab2;
-    public static string ab3;
+    public static string ab1 ="blink";
+    public static string ab2 = "heal";
+    public static string ab3 = "immunity";
     public static string status = "lose";
     void Awake()
     {
