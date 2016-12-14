@@ -17,7 +17,7 @@ public class startGame : MonoBehaviour {
          if(GameStats.bossname == "Warrok")
 
 
-         SceneManager.LoadScene("TestScene_01 - Copy");
+         SceneManager.LoadScene("Test_Alexander");
         
         
     }

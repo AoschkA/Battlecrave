@@ -17,10 +17,9 @@ public class backtomain : MonoBehaviour {
     public void changeScene()
     {
 
-        Debug.Log("Dead"); Debug.Log("Dead"); Debug.Log("Dead"); Debug.Log("Dead"); Debug.Log("Dead");
+  
         SceneManager.LoadScene("StartMenu");
-        /*Debug.Log("something");
-            SceneManager.LoadScene("StartMenu");*/
+    
 
     }
 }

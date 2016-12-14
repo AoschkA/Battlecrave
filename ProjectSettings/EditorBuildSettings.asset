@@ -8,6 +8,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/MainMenu.unity
   - enabled: 1
-    path: Assets/_Scenes/TestScene_01 - Copy.unity
-  - enabled: 1
-    path: Assets/_Scenes/EndScene.unity
+    path: Assets/_Scenes/Test_Alexander.unity
