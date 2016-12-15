@@ -17,7 +17,12 @@ public class BossController : MonoBehaviour {
 
     public void Awake()
     {
-        currentHealth = startingHealth;
+        if (GameStats.difficult == "Easy") startingHealth = 5500;
+         if (GameStats.difficult == "Medium") startingHealth = 5500 * 2;
+                  if (GameStats.difficult == "Hard") startingHealth = 5500 * 5;
+         currentHealth = startingHealth;
+
+
     }
     void Update()
     {

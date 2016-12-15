@@ -18,8 +18,11 @@ public class setName : MonoBehaviour
 
     }
     public void setPlayer()
+        
     {
-        GameStats.playerName = IF.text;
+        string player = IF.text;
+        PlayerPrefs.SetString("playerName", player);
+        GameStats.playerName = player;
     }
     public void setab1()
     {

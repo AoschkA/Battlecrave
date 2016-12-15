@@ -19,6 +19,7 @@ public class GameStats : MonoBehaviour
     public static string status = "lose";
     void Awake()
     {
+        playerName = PlayerPrefs.GetString("playerName", "player");
         if (Instance == null)
         {
             DontDestroyOnLoad(gameObject);

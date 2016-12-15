@@ -21,5 +21,15 @@ public class startGame : MonoBehaviour {
         
         
     }
+    public void exit()
+    {
+
+
+
+
+        Application.Quit();
+    }
+
+    
 
 }
