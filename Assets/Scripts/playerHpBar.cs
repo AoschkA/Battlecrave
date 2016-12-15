@@ -2,7 +2,7 @@
 using System.Collections;
 using UnityEngine.UI;
 
-public class hpbar : MonoBehaviour {
+public class playerHpBar : MonoBehaviour {
     float maxHp = 100;
     float currentHp = 45;
      HealthController unit;
