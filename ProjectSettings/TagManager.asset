@@ -10,6 +10,7 @@ TagManager:
   - Boss
   - Arcane Bolt
   - Bullet
+  - HatchCollider
   layers:
   - Default
   - TransparentFX
