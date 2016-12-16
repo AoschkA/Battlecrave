@@ -22,7 +22,7 @@ public class bossHpBar : MonoBehaviour
     void Update()
     {
         float procenthp = (currentHp * 100) / maxHp;
-        currentHp = unit.currentHealth;
+		currentHp = (float)unit.GetCurrentHealth();
         bar.transform.localScale = new Vector3(procenthp, transform.localScale.y, transform.localScale.z);
         hptext.text = procenthp + "%";
 

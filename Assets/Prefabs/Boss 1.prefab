@@ -804,7 +804,7 @@ GameObject:
   - 4: {fileID: 4000014237756192}
   m_Layer: 0
   m_Name: Boss 1
-  m_TagString: Boss
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2115,7 +2115,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingHealth: 5500
-  currentHealth: 5500
   deadhigh: {fileID: 0}
   returnscreen: {fileID: 1000012153255984, guid: 677ffbd3da32b3e408b1eb197d40f378,
     type: 2}

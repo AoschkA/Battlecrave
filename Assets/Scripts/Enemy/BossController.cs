@@ -8,7 +8,7 @@ using Debug = UnityEngine.Debug;
 
 public class BossController : MonoBehaviour {
     public int startingHealth = 5500;
-    public int currentHealth = 5500;
+    private int currentHealth = 5500;
     private bool isDead = false;
     public GameObject deadhigh;
     public GameObject returnscreen;
@@ -57,4 +57,8 @@ public class BossController : MonoBehaviour {
         //CapsuleCollider.isTrigger = true;
 
     }
+
+	public int GetCurrentHealth (){
+		return currentHealth;
+	}
 }

@@ -22,7 +22,6 @@ public class HatchCollisionScript : MonoBehaviour {
 	}
 
 	void OnTriggerStay(Collider playerCollision){
-		Debug.Log ("Test");
 		if (playerCollision.gameObject.tag == "Player") {
 			isPlayerCollidingHatch = true;
 			Debug.Log ("Entering collision with player (Hatch)");
