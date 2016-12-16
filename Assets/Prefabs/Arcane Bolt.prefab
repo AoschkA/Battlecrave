@@ -21,7 +21,7 @@ GameObject:
   - 4: {fileID: 4000013609298656}
   - 198: {fileID: 198000011722565686}
   - 199: {fileID: 199000013028963104}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: FireballTail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   - 54: {fileID: 54000010625435594}
   - 108: {fileID: 108000010293064150}
   - 114: {fileID: 114000010052827922}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: FireballCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61,7 +61,7 @@ GameObject:
   - 82: {fileID: 82000010065309028}
   - 135: {fileID: 135000011103548250}
   - 114: {fileID: 114000012143022376}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Arcane Bolt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -80,7 +80,7 @@ GameObject:
   - 82: {fileID: 82000012142425452}
   - 114: {fileID: 114000013189948052}
   - 114: {fileID: 114000011359797208}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Fireball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,7 +97,7 @@ GameObject:
   - 4: {fileID: 4000012653213300}
   - 198: {fileID: 198000010959639790}
   - 199: {fileID: 199000011382292974}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: FireballExplosion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -114,7 +114,7 @@ GameObject:
   - 4: {fileID: 4000011007884646}
   - 198: {fileID: 198000011780193722}
   - 199: {fileID: 199000010355021628}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: FireballProjectiles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
