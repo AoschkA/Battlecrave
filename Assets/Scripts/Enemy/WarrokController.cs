@@ -62,6 +62,7 @@ public class WarrokController : MonoBehaviour {
     void MeteorRain() {
         Instantiate(meteorRainPrefab, new Vector3(0f,0f,0f), Quaternion.Euler(0f,0f,0f));
 		OpenHatches ();
+        StartCoroutine(CloseHatches());
     }
 
 	void OpenHatches() {
@@ -70,4 +71,10 @@ public class WarrokController : MonoBehaviour {
 			Debug.Log ("yes");
 		}
 	}
+    IEnumerator CloseHatches() {
+        yield return 20;
+        for (int i = 0; i < hatchscripts.Length; i++) {
+            hatchscripts[i].SetIsHatchOpen(false);
+        }
+    }
 }
