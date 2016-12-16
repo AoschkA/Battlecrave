@@ -72,7 +72,7 @@ public class WarrokController : MonoBehaviour {
 		}
 	}
     IEnumerator CloseHatches() {
-        yield return 20;
+        yield return new WaitForSeconds(5);
         for (int i = 0; i < hatchscripts.Length; i++) {
             hatchscripts[i].SetIsHatchOpen(false);
         }
