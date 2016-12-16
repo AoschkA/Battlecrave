@@ -31,8 +31,8 @@ public class WarrokController : MonoBehaviour {
     }
 	void Update () {
         trigger++;
-        if (trigger % 200 == 0) {
-            int attackNumber = rnd.Next(1, 5);
+        if (trigger % 30 == 0) {
+            int attackNumber = rnd.Next(1, 4);
             Animate(attackNumber);
         }
 
@@ -46,17 +46,16 @@ public class WarrokController : MonoBehaviour {
         if (attackNumber == 1) {
             anim.SetTrigger("punch");
         }
-        if (attackNumber == 2) {
-            anim.SetTrigger("swipe");
-        }
-        if (attackNumber == 3) {
+        else if (attackNumber == 3) {
             anim.SetTrigger("flex");
+        } else {
+            anim.SetTrigger("punch");
         }
     }
 
     void ArcaneBolt() {
         Vector3 position = player.transform.position;
-        position.y = position.y + 30;
+        position.y = position.y + 10;
         Instantiate(arcaneBoltPrefab, position, Quaternion.Euler(0f, 0f, 0f));
     }
 

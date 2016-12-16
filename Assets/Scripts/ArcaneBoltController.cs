@@ -5,17 +5,18 @@ public class ArcaneBoltController : MonoBehaviour {
     public float arcaneBoltSpeed = 7;
     public GameObject hitPrefab;
 
-    private GameObject player;
+    private HealthController playerHealth;
 
     void Awake() {
-        player = GameObject.FindGameObjectWithTag("Player");
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        playerHealth = player.GetComponent<HealthController>();
     }
 
     void OnTriggerEnter(Collider other) {
         if (other.gameObject.name == "Player") {
-            // Hit player
             Instantiate(hitPrefab, transform.position, transform.rotation);
             Destroy(this.gameObject);
+            playerHealth.GetHit(5000);
         }
         if (other.gameObject.name == "Floor") {
             // Hit floor
