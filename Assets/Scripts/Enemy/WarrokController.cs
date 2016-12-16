@@ -12,12 +12,22 @@ public class WarrokController : MonoBehaviour {
     private GameObject player;
     private GameObject arcaneBolt;
     private System.Random rnd;
+	private GameObject[] hatches;
+	private HatchScript[] hatchscripts;
+	private int numHatches = 4;
 
     void Awake() {
         anim = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player");
         arcaneBolt = GameObject.FindGameObjectWithTag("Arcane Bolt");
         rnd = new System.Random();
+
+		hatches = new GameObject[numHatches];
+		hatchscripts = new HatchScript[hatches.Length];
+		hatches = GameObject.FindGameObjectsWithTag("Hatches");
+		for (int i = 0; i < hatches.Length; i++) {
+			hatchscripts [i] = hatches [i].GetComponent<HatchScript> ();
+		}
     }
 	void Update () {
         trigger++;
@@ -52,5 +62,13 @@ public class WarrokController : MonoBehaviour {
 
     void MeteorRain() {
         Instantiate(meteorRainPrefab, new Vector3(0f,0f,0f), Quaternion.Euler(0f,0f,0f));
+		OpenHatches ();
     }
+
+	void OpenHatches() {
+		for (int i = 0; i < hatchscripts.Length; i++) {
+			hatchscripts [i].SetIsHatchOpen (true);
+			Debug.Log ("yes");
+		}
+	}
 }

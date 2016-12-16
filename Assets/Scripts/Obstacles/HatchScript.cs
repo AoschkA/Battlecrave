@@ -28,6 +28,7 @@ public class HatchScript : MonoBehaviour {
 
 		}
 		if (open && !openIsUnset) {
+			
 			// -2 and +2 due to the fact that I don't want hatches to open to 90 degrees, this allows difference Δxz to find either top,left,right or bottom hatch.
 			//Top
 			if (turnAroundPoint.transform.position.z-2 > transform.position.z && turnAroundPoint.transform.position.x == transform.position.x)
@@ -61,6 +62,11 @@ public class HatchScript : MonoBehaviour {
 
 	public bool GetIsHatchOpen(){
 		return open;
+	}
+
+	public void SetIsHatchOpen(bool isOpen){
+		open = isOpen;
+		openIsUnset = false;
 	}
 		
 }
