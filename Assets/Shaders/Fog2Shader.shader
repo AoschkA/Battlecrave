@@ -1,7 +1,7 @@
-﻿Shader "Custom/OmaShader" {
+﻿Shader "Custom/YmaShader" {
 	Properties{
 		_MainTex("Texture", 2D) = "black" {}
-	_FogColor("Fog Color", Color) = (0.2, 0.5, 0.7, 1.0)
+	_FogColor("Fog Color", Color) = (0.5, 0.6, 0.7, 0.8)
 	}
 		SubShader{
 		Tags{ "RenderType" = "Opaque" }

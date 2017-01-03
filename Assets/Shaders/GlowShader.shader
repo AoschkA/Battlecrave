@@ -2,7 +2,7 @@
 	Properties{
 
 		// Control Texture ("Splat Map")
-		[HideInInspector] _Control("Control (RGBA)", 2D) = "red" {}
+		[HideInInspector] _Control("Control (RGBA)", 2D) = "yellow" {}
 
 	// Terrain textures - each weighted according to the corresponding colour
 	// channel in the control texture
