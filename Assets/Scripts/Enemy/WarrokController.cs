@@ -31,7 +31,7 @@ public class WarrokController : MonoBehaviour {
     }
 	void Update () {
         trigger++;
-        if (trigger % 30 == 0) {
+        if (trigger % 70 == 0) {
             int attackNumber = rnd.Next(1, 4);
             Animate(attackNumber);
         }
@@ -55,7 +55,7 @@ public class WarrokController : MonoBehaviour {
 
     void ArcaneBolt() {
         Vector3 position = player.transform.position;
-        position.y = position.y + 10;
+        position.y = position.y + 50;
         Instantiate(arcaneBoltPrefab, position, Quaternion.Euler(0f, 0f, 0f));
     }
 
