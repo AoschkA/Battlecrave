@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.43738595, g: 0.4851442, b: 0.5653538, a: 1}
+  m_IndirectSpecularColor: {r: 0.4373865, g: 0.4851449, b: 0.5653545, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -1043,6 +1043,11 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 238697069}
+--- !u!1 &247098739 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000010422785710, guid: 0cbfe335acecd8544ad37709d246bc32,
+    type: 2}
+  m_PrefabInternal: {fileID: 1462268812}
 --- !u!1 &274072869
 GameObject:
   m_ObjectHideFlags: 0
@@ -2853,9 +2858,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 075258b59c0c97e4884f460b0290dee2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BulletEmitter: {fileID: 0}
-  Bullet: {fileID: 0}
-  BulletForce: 0
+  BulletEmitter: {fileID: 247098739}
+  Bullet: {fileID: 1000010057385864, guid: 54e6772b28dfb1245b5bc5c43679d9ab, type: 2}
+  BulletForce: 1000
 --- !u!114 &722969928
 MonoBehaviour:
   m_ObjectHideFlags: 0
