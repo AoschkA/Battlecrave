@@ -4,9 +4,9 @@ using System.Collections;
 public class HealthController : MonoBehaviour
 {
     public int PlayerHealth;
-    private bool isDamaged;
-    private bool isDead;
-    private bool isImmune;
+    private bool isDamaged = false;
+    private bool isDead = false;
+    private bool isImmune = false;
     public GameObject deadhigh;
     public GameObject returnscreen;
     int maxhp;
@@ -46,7 +46,7 @@ public class HealthController : MonoBehaviour
 
     public void CheckIfDead()
     {
-        if (0 >= PlayerHealth)
+        if (0 >= PlayerHealth || transform.position.y <= -15)
         {
             isDead = true;
             GameStats.status = "lost";

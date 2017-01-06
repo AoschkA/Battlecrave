@@ -31,8 +31,8 @@ public class WarrokController : MonoBehaviour {
     }
 	void Update () {
         trigger++;
-        if (trigger % 70 == 0) {
-            int attackNumber = rnd.Next(1, 4);
+        if (trigger % 120 == 0) {
+            int attackNumber = rnd.Next(1, 8);
             Animate(attackNumber);
         }
 
