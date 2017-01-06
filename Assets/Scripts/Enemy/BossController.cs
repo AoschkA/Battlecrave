@@ -47,6 +47,7 @@ public class BossController : MonoBehaviour {
     void Death() {
         Debug.Log("Dead");
         isDead = true;
+		Destroy (gameObject);
         GameStats.timer = timer.gametime;
         Debug.Log("GS is now" + GameStats.timer);
         GameStats.status = "win";

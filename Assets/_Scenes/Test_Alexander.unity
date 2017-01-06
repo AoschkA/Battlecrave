@@ -1928,6 +1928,11 @@ Prefab:
       propertyPath: m_Name
       value: Boss 1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 136000013742340186, guid: a3917ee2b40339948a788f830e1a17f5,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a3917ee2b40339948a788f830e1a17f5, type: 2}
   m_IsPrefabParent: 0

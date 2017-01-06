@@ -17,7 +17,7 @@ public class BulletController : MonoBehaviour
     {
         if (col.gameObject.tag == "Boss") {
             Debug.Log("Hit");
-            bossHealth.TakeDamage(200,transform.position);
+            bossHealth.TakeDamage(500,transform.position);
             Destroy(gameObject);
 
         }
