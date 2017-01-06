@@ -11,6 +11,7 @@ TagManager:
   - Arcane Bolt
   - Bullet
   - HatchCollider
+  - Canvas
   layers:
   - Default
   - TransparentFX

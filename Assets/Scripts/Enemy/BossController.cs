@@ -12,6 +12,7 @@ public class BossController : MonoBehaviour {
     private bool isDead = false;
     public GameObject deadhigh;
     public GameObject returnscreen;
+	public GameObject canvas;
 
     private ParticleSystem hitParticles;
 
@@ -45,7 +46,7 @@ public class BossController : MonoBehaviour {
 
     }
     void Death() {
-        Debug.Log("Dead");
+		canvas.SetActive (true);
         isDead = true;
 		Destroy (gameObject);
         GameStats.timer = timer.gametime;
